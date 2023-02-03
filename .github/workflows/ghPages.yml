@@ -27,7 +27,7 @@ jobs:
       - name: Install and build
         run: |
           pnpm i
-          pnpm run build
+          pnpm run build --base=/threejs-starter/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
