@@ -1,16 +1,15 @@
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
-import { TextureLoader } from 'three'
+import { LoadingManager, TextureLoader } from 'three'
 
-// TODO: make example
-const dracoLoader = new DRACOLoader()
+const loadingManager = new LoadingManager()
+
+const dracoLoader = new DRACOLoader(loadingManager)
 dracoLoader.setDecoderPath('draco/')
 
-const gltfLoader = new GLTFLoader()
+const gltfLoader = new GLTFLoader(loadingManager)
 gltfLoader.setDRACOLoader(dracoLoader)
 
-const textureLoader = new TextureLoader()
-// gltfLoader.load('resource', (gltf) => {
-// })
+const textureLoader = new TextureLoader(loadingManager)
 
-export {}
+export { loadingManager }

@@ -3,7 +3,7 @@ import { emitter } from './emitter'
 import { scene } from './scene'
 
 export const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 100)
-camera.position.z = 3
+camera.position.z = 4
 camera.position.y = 2
 scene.add(camera)
 

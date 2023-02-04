@@ -11,9 +11,11 @@ const material = new ShaderMaterial({
   vertexShader,
 })
 const cube = new Mesh(geometry, material)
+cube.castShadow = true
 scene.add(cube)
 
 emitter.on('update', ({ deltaTime }) => {
   cube.rotation.y += deltaTime * 0.5
 })
-export {}
+export { }
+

@@ -1,8 +1,9 @@
 import './scene'
-import './renderer'
 import './camera'
-
 import './controls'
+import './environments'
+import './renderer'
+
 import './animate'
 import './sizes'
 import './resources'

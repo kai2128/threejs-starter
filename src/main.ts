@@ -1,4 +1,5 @@
 import './style.css'
 import './setup'
 
-import '@/setup/example/exampleCube' // delete this line
+import '@/setup/example/cube'
+import '@/setup/example/plane'
